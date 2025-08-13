@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Northservice - North Service Group SAC</title>   
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#inicio">
+        <img src="img/logo.jpg" alt="Northservice logo" class="logo">
+        <span class="brand-name">Northservice</span>
+      </a>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="hero-inner">
+      <h1>North Service Group SAC</h1>
+      <p class="lead">Es una empresa especializada en la implementación de sistemas de aire acondicionado y ventilación. Ofrecemos desde el suministro y la instalación de los equipos, hasta los planes de mantenimiento integrales para todos los sectores. También ofrecemos Servicios Generales contando con el personal calificado y con experiencia.</p>
+      <a class="cta" href="#contacto">Solicita una cotización</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Suministro e instalación</h3>
+            <p>Suministramos e instalamos equipos de aire acondicionado y ventilación para todo tipo de proyectos.</p>
+          </article>
+          <article class="card">
+            <h3>Mantenimiento integral</h3>
+            <p>Planes de mantenimiento preventivo y correctivo para mantener tus equipos en óptimas condiciones.</p>
+          </article>
+          <article class="card">
+            <h3>Servicios generales</h3>
+            <p>Contamos con personal calificado para trabajos adicionales y soporte técnico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section id="galeria" class="section">
+      <div class="container">
+        <h2>Galería</h2>
+        <div class="carousel" aria-label="Galería de imágenes">
+          <div class="slides">
+            <div class="slide"><img src="img/img0.jpg" alt="Trabajamos con grandes Empresas"></div>
+	    <div class="slide"><img src="img/img1.png" alt="Sala de Operaciones"></div>
+            <div class="slide"><img src="img/img2.png" alt="Ductos"></div>
+            <div class="slide"><img src="img/img3.png" alt="Ductos"></div>
+	    <div class="slide"><img src="img/img4.jpeg" alt="Mantenimiento Equipo Cassette"></div>
+	    <div class="slide"><img src="img/img5.png" alt="Mantenimiento Condensador"></div>
+	    <div class="slide"><img src="img/img6.png" alt="Mantenimiento Equipo Split"></div>
+	    <div class="slide"><img src="img/img7.png" alt="Equipos Instalados"></div>
+	    <div class="slide"><img src="img/img8.png" alt="Equipos Instalados"></div>
+	    <div class="slide"><img src="img/img9.png" alt="Equipo Cassette"></div>
+	    <div class="slide"><img src="img/img10.png" alt="Equipos Instalados"></div>
+	    <div class="slide"><img src="img/img21.jpeg" alt="Limpieza de edificio"></div>
+	    <div class="slide"><img src="img/img22.jpeg" alt="Servicio de Limpieza"></div>
+	    <div class="slide"><img src="img/img23.jpeg" alt="Servicio de Limpieza"></div>
+	    <div class="slide"><img src="img/img24.jpeg" alt="Servicio de Limpieza"></div>
+	    <div class="slide"><img src="img/img25.jpeg" alt="Servicio de Pintado"></div>
+	    <div class="slide"><img src="img/img26.jpeg" alt="Servicio de Pintado"></div>
+            <div class="slide"><img src="img/img27.png" alt="Instalación de Transformador"></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Anterior">&lt;</button>
+          <button class="carousel-btn next" aria-label="Siguiente">&gt;</button>
+          <div class="dots" role="tablist" aria-label="Selector de imágenes"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <div class="contact-grid">
+          <form class="contact-form" action="https://formspree.io/f/mzzvozpb" method="POST">
+            <label>
+              Nombre
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              Teléfono
+              <input type="tel" name="phone" required>
+            </label>
+            <label>
+              Mensaje
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+            <button type="submit">Enviar mensaje</button>
+          </form>
+          <aside class="contact-info">
+            <h3>Información</h3>
+            <p><strong>Tel:</strong> 968387519</p>
+            <p><strong>Email:</strong> <a href="mailto:proyectos@northservice.pe">proyectos@northservice.pe</a></p>
+            <p>© 2025 Northservice - North Service Group SAC</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Northservice — Venta, instalación y mantenimiento de equipos de aire acondicionado.</p>
+      <p>Tel: 968387519 | Email: <a href="mailto:proyectos@northservice.pe">proyectos@northservice.pe</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
