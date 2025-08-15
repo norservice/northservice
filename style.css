@@ -111,9 +111,16 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   .menu {
     display: none;
     flex-direction: column;
-    background: #fff;
+    background: var(--blue); /* azul corporativo */
     padding: 1rem;
   }
+  .menu.menu-open {
+    display: flex;
+  }
+  .menu a {
+    color: white; /* texto blanco para contraste */
+  }
+}
   .menu.menu-open {
     display: flex;
   }
