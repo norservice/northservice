@@ -57,3 +57,20 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.classList.toggle('menu-open');
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const links = document.querySelectorAll('.menu a');
+
+  toggle.addEventListener('click', function() {
+    menu.classList.toggle('menu-open');
+  });
+
+  // Cierra el menú al hacer clic en cualquier enlace
+  links.forEach(link => {
+    link.addEventListener('click', function() {
+      menu.classList.remove('menu-open');
+    });
+  });
+});
