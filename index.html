@@ -49,10 +49,23 @@
             <p>Contamos con personal calificado para trabajos adicionales y soporte técnico.</p>
           </article>
         </div>
-      </div>
-    </section>
-    
-    <section id="galeria" class="section">
+      
+    <!-- Texto adicional oculto -->
+    <div id="texto-extra" style="display: none; margin-top: 1rem;">
+      <p>
+        Además, ofrecemos asesoría especializada, instalación de ductos y sistemas de ventilación
+        industrial, limpieza profunda de equipos, y soporte técnico permanente para garantizar el
+        óptimo rendimiento de todos los sistemas que implementamos.
+      </p>
+    </div>
+
+    <!-- Botón -->
+    <button id="btn-mas-info" type="button" style="margin-top: 1rem;">Más información</button>
+
+  </div>
+</section>
+
+<section id=\"galeria\" class="section">
       <div class="container">
         <h2>Galería</h2>
         <div class="carousel" aria-label="Galería de imágenes">
@@ -125,5 +138,22 @@
   </footer>
 
   <script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const boton = document.getElementById('btn-mas-info');
+  const textoExtra = document.getElementById('texto-extra');
+
+  boton.addEventListener('click', function() {
+    if (textoExtra.style.display === "none") {
+      textoExtra.style.display = "block";
+      boton.textContent = "Mostrar menos";
+    } else {
+      textoExtra.style.display = "none";
+      boton.textContent = "Más información";
+    }
+  });
+});
+</script>
+
 </body>
 </html>
