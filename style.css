@@ -74,8 +74,9 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
 }
     .carousel img {
     max-width: 100% ;
-    max-height: 100% ; 
+    height: auto ; 
     object-fit: contain;
+    display: block;
              
   }   
 
@@ -101,3 +102,19 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   .slide img { height:300px; }
 }
 
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    padding: 1rem;
+  }
+  .menu.menu-open {
+    display: flex;
+  }
+}
