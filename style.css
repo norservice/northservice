@@ -107,23 +107,32 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   gap: 1rem;
 }
 
+/* --- Menú hamburguesa en móvil --- */
 @media (max-width: 768px) {
   .menu {
     display: none;
     flex-direction: column;
-    background: var(--blue); /* azul corporativo */
+    position: absolute;
+    top: 60px; /* debajo de la barra */
+    right: 10px;
+    background: var(--blue);
     padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
   }
   .menu.menu-open {
     display: flex;
   }
-  .menu a {
-    color: white; /* texto blanco para contraste */
+ .menu a {
+    color: white;
+    font-weight: 600;
+  }
+  .menu a:hover {
+    color: var(--orange);
   }
 }
-  .menu.menu-open {
-    display: flex;
-  }
+
 
 #texto-extra p {
   text-align: justify;
