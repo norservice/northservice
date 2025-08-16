@@ -166,7 +166,56 @@
     });
  });
 </script>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // --- Botón "Más información" ---
+      const boton = document.getElementById('btn-mas-info');
+      const textoExtra = document.getElementById('texto-extra');
+
+      if (boton) {
+        boton.addEventListener('click', function() {
+          if (textoExtra.style.display === "none") {
+            textoExtra.style.display = "block";
+            boton.textContent = "Mostrar menos";
+          } else {
+            textoExtra.style.display = "none";
+            boton.textContent = "Más información";
+          }
+        });
+      }
+
+      // --- Menú hamburguesa ---
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.menu');
+      const links = document.querySelectorAll('.menu a');
+
+      // abrir/cerrar menú con ☰
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('menu-open');
+      });
+
+      // cerrar menú al hacer clic en un enlace
+      links.forEach(link => {
+        link.addEventListener('click', function() {
+          menu.classList.remove('menu-open');
+        });
+      });
+
+      // cerrar menú al hacer clic fuera
+      document.addEventListener('click', function(e) {
+        if (menu.classList.contains('menu-open') &&
+            !menu.contains(e.target) &&
+            !toggle.contains(e.target)) {
+          menu.classList.remove('menu-open');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
 
 
