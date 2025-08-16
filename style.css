@@ -124,9 +124,8 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   .menu.menu-open {
     display: flex;
   }
-}
 
-#exto-extra p {
+#texto-extra p {
   text-align: justify;
   line-height: 1.5;
 }
