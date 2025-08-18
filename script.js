@@ -39,31 +39,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
   goTo(0);
 
- });
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  menuToggle.addEventListener('click', ()=> {
+    if(menu.style.display === 'flex') menu.style.display = 'none';
+    else menu.style.display = 'flex';
+  });
+});
 
 // Menú hamburguesa para móvil
 document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.menu');
-  const links = document.querySelectorAll('.menu a');
 
-// Abrir/cerrar menú
   toggle.addEventListener('click', function() {
     menu.classList.toggle('menu-open');
   });
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const links = document.querySelectorAll('.menu a');
+
+  toggle.addEventListener('click', function() {
+    menu.classList.toggle('menu-open');
+  });
 
   // Cierra el menú al hacer clic en cualquier enlace
   links.forEach(link => {
     link.addEventListener('click', function() {
       menu.classList.remove('menu-open');
     });
-  });
-
-// Cerrar menú al hacer clic fuera
-  document.addEventListener('click', function(e) {
-    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
-      menu.classList.remove('menu-open');
-    }
   });
 });
