@@ -143,3 +143,59 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
 section {
   scroll-margin-top: 80px; /* alto aproximado de la barra */
 }
+#
+
+
+/* --- Ajustes para que la galería se muestre correctamente --- */
+
+/* Por defecto: altura automática */
+.carousel {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  background-color: #000;
+  text-align: center;
+  position: relative;
+}
+
+/* En pantallas grandes, mantener look elegante */
+@media (min-width: 1024px) {
+  .carousel {
+    height: 80vh;
+    max-height: 700px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* --- Ajustes galería para móviles --- */
+@media (max-width: 768px) {
+  .carousel {
+    height: auto;          /* que se ajuste a las imágenes */
+    max-height: none;
+    overflow: visible;     /* permitir ver todo */
+    padding: 10px 0;
+  }
+
+  .slides {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .slide {
+    flex: 0 0 100%;        /* cada slide ocupa 100% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;   /* mostrar toda la foto */
+    border-radius: 6px;    /* opcional: bordes suaves */
+  }
+}
