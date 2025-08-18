@@ -170,32 +170,17 @@ section {
     justify-content: center;
   }
 }
-/* --- Ajustes galería para móviles --- */
+/* --- Ajustes galería SOLO en móviles --- */
 @media (max-width: 768px) {
   .carousel {
-    height: auto;          /* que se ajuste a las imágenes */
-    max-height: none;
-    overflow: visible;     /* permitir ver todo */
-    padding: 10px 0;
-  }
-
-  .slides {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-
-  .slide {
-    flex: 0 0 100%;        /* cada slide ocupa 100% */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: auto !important;     /* que se adapte */
+    max-height: none !important;
+    overflow: hidden;            /* dejar que JS maneje el slide */
   }
 
   .slide img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    object-fit: contain;   /* mostrar toda la foto */
-    border-radius: 6px;    /* opcional: bordes suaves */
+    object-fit: contain;         /* mostrar foto completa */
   }
 }
