@@ -170,17 +170,3 @@ section {
     justify-content: center;
   }
 }
-/* --- Ajustes galería SOLO en móviles --- */
-@media (max-width: 768px) {
-  .carousel {
-    height: auto !important;     /* que se adapte */
-    max-height: none !important;
-    overflow: hidden;            /* dejar que JS maneje el slide */
-  }
-
-  .slide img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;         /* mostrar foto completa */
-  }
-}
