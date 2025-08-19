@@ -171,3 +171,19 @@ section {
 .whatsapp-float i {
   color: white;
 }
+/* Fix para iPhone/Safari en la galería */
+.carousel img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* evita que sea más alto que la pantalla */
+  object-fit: cover;
+  display: block; /* en Safari a veces requiere esto */
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* Solo aplica en Safari iOS */
+  .carousel img {
+    height: auto !important;
+    max-height: 70vh !important;
+  }
+}
