@@ -74,3 +74,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+  });
+});
+
+// Cerrar menú al hacer clic fuera
+document.addEventListener('click', (e) => {
+  if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+    menu.classList.remove('active');
+  }
+});
+
