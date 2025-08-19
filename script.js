@@ -58,34 +58,29 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
-  const links = document.querySelectorAll('.menu a');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
 
-  toggle.addEventListener('click', function() {
-    menu.classList.toggle('menu-open');
-  });
-
-  // Cierra el menú al hacer clic en cualquier enlace
-  links.forEach(link => {
-    link.addEventListener('click', function() {
-      menu.classList.remove('menu-open');
+  if (menuToggle && menu) {
+    // Abrir/cerrar menú
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation(); // evita que cierre inmediatamente
+      menu.classList.toggle("active");
     });
-  });
-});
 
-// Cerrar menú al hacer clic en un enlace
-document.querySelectorAll('.menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('active');
-  });
-});
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll(".menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    });
 
-// Cerrar menú al hacer clic fuera
-document.addEventListener('click', (e) => {
-  if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-    menu.classList.remove('active');
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+        menu.classList.remove("active");
+      }
+    });
   }
 });
-
