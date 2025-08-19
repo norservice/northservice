@@ -101,10 +101,12 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   .contact-grid { grid-template-columns: 1fr; }
   .slide img { height:300px; }
 }
-
-.menu {
-  display: flex;
-  gap: 1rem;
+/* --- Menú en escritorio (pantallas grandes) --- */
+@media (max-width: 769px) {
+  .menu {
+    display: flex;
+    gap: 1rem;
+  }  
 }
 
 /* --- Menú hamburguesa en móvil --- */
