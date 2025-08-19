@@ -233,3 +233,23 @@ section {
   object-fit: contain;      /* muestra completa la foto */
   -webkit-object-fit: contain; /* compatibilidad Safari */
 }
+.instagram-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 140px; /* más arriba que el WhatsApp */
+  right: 20px;
+  background: #E1306C;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 50px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+}
+
+.instagram-float:hover {
+  background: #C13584;
+  color: #fff;
+}
