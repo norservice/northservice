@@ -187,3 +187,19 @@ section {
     max-height: 70vh !important;
   }
 }
+
+/* ==== Ajustes de la galería para móviles (iOS/Android) ==== */
+.carousel img {
+  width: 100%;
+  height: auto;        /* se adapta al alto automáticamente */
+  object-fit: contain; /* muestra la foto completa sin recortes */
+  display: block;
+  background: #000;    /* fondo negro de seguridad */
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;    /* evita franjas raras en Safari */
+}
