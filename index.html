@@ -178,33 +178,7 @@
           }
       });
     }
-
-   // --- Menú hamburguesa ---
-      const toggle = document.querySelector('.menu-toggle');
-      const menu = document.querySelector('.menu');
-      const links = document.querySelectorAll('.menu a');  
-
-    // abrir/cerrar menú con ☰
-      toggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        menu.classList.toggle('menu-open');
-      });
-
-    // cerrar menú al hacer clic en un enlace
-      links.forEach(link => {
-        link.addEventListener('click', function() {
-          menu.classList.remove('menu-open');
-        });
-      });
-
-      // cerrar menú al hacer clic fuera
-      document.addEventListener('click', function(e) {
-        if (menu.classList.contains('menu-open') &&
-            !menu.contains(e.target) &&
-            !toggle.contains(e.target)) {
-          menu.classList.remove('menu-open');
-         }
-      });
+    
     });
 </script>
 <!-- Botón flotante de WhatsApp -->
