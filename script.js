@@ -49,15 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Menú hamburguesa para móvil
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
-
-  toggle.addEventListener('click', function() {
-    menu.classList.toggle('menu-open');
-  });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".menu");
