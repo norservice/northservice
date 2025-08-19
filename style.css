@@ -101,7 +101,7 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   .contact-grid { grid-template-columns: 1fr; }
   .slide img { height:300px; }
 }
-/* --- Menú en escritorio (pantallas grandes) --- */
+
 @media (max-width: 769px) {
   .menu {
     display: flex;
@@ -204,4 +204,32 @@ section {
   align-items: center;
   justify-content: center;
   background: #000;    /* evita franjas raras en Safari */
+}
+/* ----- Carrusel Imágenes ----- */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #000; /* evita el fondo blanco al cargar */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000; /* evita parpadeo en iPhone */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;             /* ✅ importante para Safari */
+  max-height: 500px;        /* controla altura sin cortar */
+  object-fit: contain;      /* muestra completa la foto */
+  -webkit-object-fit: contain; /* compatibilidad Safari */
 }
