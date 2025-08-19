@@ -66,20 +66,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Abrir/cerrar menú
     menuToggle.addEventListener("click", (e) => {
       e.stopPropagation(); // evita que cierre inmediatamente
-      menu.classList.toggle("active");
+      menu.classList.toggle("menu-open");
     });
 
     // Cerrar menú al hacer clic en un enlace
     document.querySelectorAll(".menu a").forEach(link => {
       link.addEventListener("click", () => {
-        menu.classList.remove("active");
+        menu.classList.remove("menu-open");
       });
     });
 
     // Cerrar menú al hacer clic fuera
     document.addEventListener("click", (e) => {
       if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-        menu.classList.remove("active");
+        menu.classList.remove("menu-open");
       }
     });
   }
