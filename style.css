@@ -66,10 +66,10 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
 
 .slide img {
   width: 100%;
-  height: auto;
-  max-height: 80vh;
+  height: 100%;
   object-fit: cover;  /* llena el espacio, sin franjas */
   display: block;
+  max-height: none; /* elimina el límite */
 }
 
 .carousel-btn { 
@@ -103,7 +103,6 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   .menu { display:none; }
   .menu-toggle { display:block; }
   .contact-grid { grid-template-columns: 1fr; }
-  .slide img { max-height: 60vh; }
 }
 
 @media (max-width: 769px) {
