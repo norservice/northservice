@@ -37,15 +37,16 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
 .card { padding:16px; border-radius:8px; background:white; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
 
 /* Carousel (corregido) */
+/* Carousel */
 .carousel {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-height: 80vh;
+  height: 80vh;              /* Fijamos altura completa */
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000; /* fondo de seguridad */
+  background: #000;          /* fondo de seguridad */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
@@ -54,24 +55,25 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
+  height: 100%;
 }
 
 .slide {
   min-width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
 }
 
 .slide img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;  /* llena el espacio, sin franjas */
+  height: 100%;             /* Ocupa todo el carrusel */
+  object-fit: cover;        /* Se adapta al espacio sin franjas */
   display: block;
-  max-height: none; /* elimina el límite */
 }
 
+/* Botones */
 .carousel-btn { 
   position:absolute; 
   top:50%; 
@@ -82,10 +84,22 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
   padding:8px 12px; 
   cursor:pointer; 
   border-radius:6px; 
+  z-index: 10;
 }
 .prev { left:12px; }
 .next { right:12px; }
 .dots { display:flex; gap:8px; justify-content:center; padding:12px; }
+
+/* Ajuste responsive */
+@media (max-width:800px){
+  .carousel {
+    height: 60vh;            /* un poco más bajo en móviles */
+  }
+  .slide img {
+    height: 100%;            /* mantiene proporción */
+  }
+}
+
 
 /* Contact */
 .contact-grid { display:grid; grid-template-columns: 1fr 320px; gap:24px; align-items:start; margin-top:12px; }
@@ -98,12 +112,7 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
 /* Footer */
 .footer { background:var(--blue); color:white; padding:18px 16px; text-align:center; }
 
-/* Responsive */
-@media (max-width:800px){
-  .menu { display:none; }
-  .menu-toggle { display:block; }
-  .contact-grid { grid-template-columns: 1fr; }
-}
+
 
 @media (max-width: 769px) {
   .menu {
