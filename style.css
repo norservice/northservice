@@ -199,3 +199,9 @@ section {
   background: #C13584;
   color: #fff;
 }
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
