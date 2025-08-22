@@ -143,34 +143,50 @@
 
 <script src="script.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // --- Botón "Más información" --- 
-    const boton = document.getElementById('btn-mas-info');
-    const textoExtra = document.getElementById('texto-extra');
+document.addEventListener('DOMContentLoaded', function() {
+  /* --- Botón "Más información" --- */
+  const boton = document.getElementById('btn-mas-info');
+  const textoExtra = document.getElementById('texto-extra');
 
-    if (boton) {
-      boton.addEventListener('click', function() {
-        if (textoExtra.style.display === "none") {
-          textoExtra.style.display = "block";
-          boton.textContent = "Mostrar menos";
-        } else {
-          textoExtra.style.display = "none";
-          boton.textContent = "Más información";
-        }
+  if (boton && textoExtra) {
+    boton.addEventListener('click', function() {
+      if (textoExtra.style.display === "none" || textoExtra.style.display === "") {
+        textoExtra.style.display = "block";
+        boton.textContent = "Mostrar menos";
+      } else {
+        textoExtra.style.display = "none";
+        boton.textContent = "Más información";
+      }
+    });
+  }
+
+  /* --- Menú hamburguesa --- */
+  const toggle = document.querySelector('.menu-toggle');
+  const menu   = document.querySelector('.menu');
+
+  if (toggle && menu) {
+    // Abrir/cerrar con el botón ☰
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      menu.classList.toggle('menu-open');
+    });
+
+    // Cerrar al hacer clic en un enlace
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('menu-open');
       });
-    }
+    });
 
-    // --- Menú hamburguesa ---
-    const toggle = document.querySelector('.menu-toggle');
-    const menu   = document.querySelector('.menu');
+    // Cerrar al hacer clic fuera del menú
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('menu-open');
+      }
+    });
+  }
 
-    if (toggle && menu) {
-      toggle.addEventListener('click', function() {
-        menu.classList.toggle('menu-open');
-      });
-    }
-
-    // --- Carrusel ---
+  /* --- Carrusel --- */
   const slides = document.querySelectorAll(".slide");
   const dotsContainer = document.querySelector(".dots");
   const prevBtn = document.querySelector(".prev");
@@ -216,10 +232,10 @@
     if (nextBtn) nextBtn.addEventListener("click", nextSlide);
     if (prevBtn) prevBtn.addEventListener("click", prevSlide);
 
-    // Auto-play opcional
+    // Auto-play
     setInterval(nextSlide, 5000);
   }
-  });
+});
 </script>
 
 
