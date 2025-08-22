@@ -45,29 +45,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   goTo(0);
 
-  // ----- Menú hamburguesa -----
-  const menuToggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".menu");
+  // --- Menú hamburguesa ---
+const toggle = document.querySelector('.menu-toggle');
+const menu   = document.querySelector('.menu');
 
-  if (menuToggle && menu) {
-    // Abrir/cerrar menú
-    menuToggle.addEventListener("click", (e) => {
-      e.stopPropagation();
-      menu.classList.toggle("menu-open");
-    });
+if (toggle && menu) {
+  // abrir/cerrar con el botón ☰
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation(); // evita que el click cierre de inmediato
+    menu.classList.toggle('menu-open');
+  });
 
-    // Cerrar al hacer clic en un enlace
-    document.querySelectorAll(".menu a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("menu-open");
-      });
+  // cerrar al hacer clic en un enlace del menú
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('menu-open');
     });
+  });
 
-    // Cerrar al hacer clic fuera
-    document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-        menu.classList.remove("menu-open");
-      }
-    });
-  }
-});
+  // cerrar al hacer clic fuera del menú
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      menu.classList.remove('menu-open');
+    }
+  });
+}
