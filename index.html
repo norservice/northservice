@@ -141,27 +141,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // --- Botón "Más información" --- 
-    const boton = document.getElementById('btn-mas-info');
-    const textoExtra = document.getElementById('texto-extra');
-
-    if (boton) {
-       boton.addEventListener('click', function() {
-          if (textoExtra.style.display === "none") {
-             textoExtra.style.display = "block";
-             boton.textContent = "Mostrar menos";
-          } else {
-            textoExtra.style.display = "none";
-            boton.textContent = "Más información";
-          }
-      });
-    }
-    
-    });
-</script>
+<script src="script.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // --- Botón "Más información" --- 
@@ -189,6 +169,56 @@
         menu.classList.toggle('menu-open');
       });
     }
+
+    // --- Carrusel ---
+  const slides = document.querySelectorAll(".slide");
+  const dotsContainer = document.querySelector(".dots");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  if (slides.length > 0 && dotsContainer) {
+    let index = 0;
+
+    // Crear dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlide(n) {
+      const slidesContainer = document.querySelector(".slides");
+      slidesContainer.style.transform = `translateX(${-n * 100}%)`;
+
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[n].classList.add("active");
+    }
+
+    function goToSlide(n) {
+      index = n;
+      showSlide(index);
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+
+    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+
+    // Auto-play opcional
+    setInterval(nextSlide, 5000);
+  }
   });
 </script>
 
