@@ -199,3 +199,8 @@ section {
   background: #C13584;
   color: #fff;
 }
+/* otras reglas arriba... */
+
+.carousel, .slides, .slide {
+    min-height: 200px;
+}
