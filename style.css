@@ -36,18 +36,12 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
 .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px; }
 .card { padding:16px; border-radius:8px; background:white; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
 
-/* Carousel (corregido) */
 .carousel {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000; /* fondo de seguridad */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-height: 80vh;   /* límite en PC */
+  background: #000;
 }
 
 .slides {
@@ -58,19 +52,21 @@ html,body { margin:0; padding:0; font-family: Arial, sans-serif; color: #222; }
 
 .slide {
   min-width: 100%;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: #000;
 }
 
 .slide img {
   width: 100%;
   height: auto;
-  max-height: 80vh;
-  object-fit: cover;  /* llena el espacio, sin franjas */
+  max-height: 80vh;   /* nunca más alto que la pantalla */
   display: block;
+  object-fit: contain; /* se ve completa */
 }
+
+
+
 
 .carousel-btn { 
   position:absolute; 
