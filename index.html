@@ -162,6 +162,37 @@
     
     });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // --- Botón "Más información" --- 
+    const boton = document.getElementById('btn-mas-info');
+    const textoExtra = document.getElementById('texto-extra');
+
+    if (boton) {
+      boton.addEventListener('click', function() {
+        if (textoExtra.style.display === "none") {
+          textoExtra.style.display = "block";
+          boton.textContent = "Mostrar menos";
+        } else {
+          textoExtra.style.display = "none";
+          boton.textContent = "Más información";
+        }
+      });
+    }
+
+    // --- Menú hamburguesa ---
+    const toggle = document.querySelector('.menu-toggle');
+    const menu   = document.querySelector('.menu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('menu-open');
+      });
+    }
+  });
+</script>
+
+
 <!-- Botón flotante de WhatsApp -->
 <a href="https://wa.me/51914187314" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
