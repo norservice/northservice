@@ -266,15 +266,48 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<!-- Ventanita de chat flotante -->
+<div id="chat-box">
+  <div id="chat-header">💬 Chatea con nosotros</div>
+  <div id="chat-body">
+    <p>Hola 👋, selecciona una opción:</p>
+    <div class="quick-replies">
+      <button onclick="sendQuickMessage('Hola North Service, quiero una instalación')">Instalación</button>
+      <button onclick="sendQuickMessage('Hola North Service, necesito un mantenimiento')">Mantenimiento</button>
+      <button onclick="sendQuickMessage('Hola North Service, deseo una cotización')">Cotización</button>
+    </div>
+    <textarea id="chat-message" placeholder="O escribe tu mensaje..."></textarea>
+    <button id="chat-send">Enviar</button>
+  </div>
+</div>
 
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/51950747183"
-   class="whatsapp-float" 
-   target="_blank"
-   aria-label="Chatea con nosotros">
-  <i class="fa-brands fa-whatsapp"></i>
-  <span class="whatsapp-text">Chatea con nosotros</span>
-</a>
+<!-- Botón flotante que abre/cierra el chat -->
+<div id="chat-toggle">💬</div>
+
+<script>
+  // Mostrar/ocultar la ventanita
+  const toggle = document.getElementById("chat-toggle");
+  const chatBox = document.getElementById("chat-box");
+  toggle.addEventListener("click", () => {
+    chatBox.classList.toggle("active");
+  });
+
+  // Enviar mensaje manual
+  const sendBtn = document.getElementById("chat-send");
+  sendBtn.addEventListener("click", () => {
+    const msg = document.getElementById("chat-message").value;
+    if(msg.trim() !== ""){
+      const url = "https://wa.me/51950747183?text=" + encodeURIComponent("Hola North Service, " + msg);
+      window.open(url, "_blank");
+    }
+  });
+
+  // Enviar mensajes rápidos
+  function sendQuickMessage(text) {
+    const url = "https://wa.me/51950747183?text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+  }
+</script>
 
 <!-- Botón flotante de Instagram -->
 <a href="https://www.instagram.com/northservicegroup" 
@@ -283,6 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
    aria-label="Instagram">
    <i class="fab fa-instagram"></i>
 </a>
+
 </body>
 </html>
 

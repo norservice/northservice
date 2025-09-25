@@ -251,3 +251,123 @@ section {
   max-height: 70vh;
   object-fit: contain;
 }
+
+/* Botón flotante */
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  font-size: 24px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* Caja de chat */
+#chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#chat-box.active {
+  display: flex;
+}
+
+#chat-header {
+  background: #25D366;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#chat-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.quick-replies button {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.quick-replies button:hover {
+  background: #e0e0e0;
+}
+
+#chat-message {
+  resize: none;
+  height: 60px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#chat-send {
+  background: #25D366;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#chat-send:hover {
+  background: #1ebe5d;
+}
+
+/* 📱 Ajustes para móviles */
+@media (max-width: 768px) {
+  #chat-box {
+    width: 90%;   /* ocupa casi todo el ancho */
+    right: 5%;    /* centrado */
+    bottom: 90px;
+  }
+
+  #chat-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  #chat-message {
+    font-size: 14px;
+  }
+
+  .quick-replies button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
