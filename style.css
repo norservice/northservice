@@ -253,6 +253,7 @@ section {
 }
 
 /* Botón flotante */
+/* Botón flotante */
 #chat-toggle {
   position: fixed;
   bottom: 20px;
@@ -268,8 +269,44 @@ section {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  z-index: 1000;
+  z-index: 9999;   /* 🔑 siempre encima de todo */
 }
+
+/* Caja de chat */
+#chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;   /* 🔑 evitar que quede detrás de tu menú o secciones */
+}
+
+#chat-box.active {
+  display: flex;
+}
+
+/* 📱 Ajustes para móviles */
+@media (max-width: 768px) {
+  #chat-box {
+    width: 90%;
+    right: 5%;
+    bottom: 90px;
+  }
+
+  #chat-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+}
+
 
 /* Caja de chat */
 #chat-box {
