@@ -176,6 +176,31 @@ section {
   font-weight: bold;
 }
 
+/* Texto junto al ícono */
+.whatsapp-text {
+  font-weight: bold;
+}
+
+/* En móviles el texto se oculta */
+@media (max-width: 768px) {
+  .whatsapp-text {
+    display: none;
+  }
+
+  .whatsapp-float {
+    border-radius: 50%;     /* vuelve a ser redondo */
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .whatsapp-float i {
+    font-size: 28px;
+  }
+}
+
+
 
 /* Botón flotante Instagram */
 .instagram-float {
