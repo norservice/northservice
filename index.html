@@ -79,40 +79,179 @@
   </div>
 </section>
 
-<section id="galeria" class="section">
+<section id="galeria" class="section" style="background-color: #f9f9f9; padding: 60px 0;">
   <div class="container">
-    <h2>Galería</h2>
+    <h2 style="text-align: center; margin-bottom: 10px;">Galería de Proyectos</h2>
+    <p style="text-align: center; margin-bottom: 40px; color: #555; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">
+      Conoce algunos de nuestros trabajos ejecutados bajo las normas técnicas vigentes ASHRAE y SMACNA en Piura.
+    </p>
 
-    <div class="carousel" aria-label="Galería de imágenes">
-      <div class="slides">
-        <div class="slide"><img src="img/img30.jpg" alt="Climatizamos ambientes de grandes Empresas"></div>
-        <div class="slide"><img src="img/img1.png" alt="Aire Acondicionado en Sala de Operaciones"></div>
-        <div class="slide"><img src="img/img12.jpg" alt="Aire Acondicionado en Resonador"></div>
-        <div class="slide"><img src="img/img2.png" alt="Ductos de inyección de aire"></div>
-        <div class="slide"><img src="img/img3.png" alt="Ductos de inyección de aire"></div>
-        <div class="slide"><img src="img/img4.jpeg" alt="Mantenimiento Equipo de aire acondicionado Cassette"></div>
-        <div class="slide"><img src="img/img5.png" alt="Mantenimiento Condensador de aire acondicionado"></div>
-        <div class="slide"><img src="img/img6.png" alt="Mantenimiento Equipo aire acondicionado tipo Split"></div>
-        <div class="slide"><img src="img/img7.png" alt="Equipos Instalados de aire acondicionado"></div>
-        <div class="slide"><img src="img/img8.png" alt="Equipos Instalados de aire acondicionado"></div>
-        <div class="slide"><img src="img/img9.png" alt="Equipo aire acondicionado tipo Cassette"></div>
-        <div class="slide"><img src="img/img10.jpeg" alt="Equipo aire acondicionado tipo Cassette"></div>
-        <div class="slide"><img src="img/img11.png" alt="Equipos Instalados de aire acondicionado"></div>
-        <div class="slide"><img src="img/img21.jpeg" alt="Limpieza de edificio"></div>
-        <div class="slide"><img src="img/img22.jpeg" alt="Servicio de Limpieza"></div>
-        <div class="slide"><img src="img/img23.jpeg" alt="Servicio de Limpieza"></div>
-        <div class="slide"><img src="img/img24.jpeg" alt="Servicio de Limpieza"></div>
-        <div class="slide"><img src="img/img25.jpeg" alt="Servicio de Pintado"></div>
-        <div class="slide"><img src="img/img26.jpeg" alt="Servicio de Pintado"></div>
-        <div class="slide"><img src="img/img27.png" alt="Instalación de Transformador"></div>
-      </div>
+    <!-- CONTENEDOR PRINCIPAL DEL GRID -->
+    <div class="proyectos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 0 15px;">
+      
+      <!-- ================= SECCIÓN: CLIMATIZACIÓN Y PROYECTOS ================= -->
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: transform 0.3s;">
+        <img src="img/img30.jpg" alt="Climatizamos ambientes de grandes Empresas" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Climatización Corporativa</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Ambientes de Grandes Empresas</h4>
+        </div>
+      </article>
 
-      <!-- Botones -->
-      <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
-      <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img1.png" alt="Aire Acondicionado en Sala de Operaciones" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Climatización Médica</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Sala de Operaciones (Norma ASHRAE)</h4>
+        </div>
+      </article>
 
-      <!-- Dots -->
-      <div class="dots" role="tablist" aria-label="Selector de imágenes"></div>
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img12.jpg" alt="Aire Acondicionado en Resonador" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Climatización Especializada</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Sistema de Aire en Sala de Resonador</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img2.png" alt="Ductos de inyección de aire" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Ventilación Industrial</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Instalación de Ductos de Inyección</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img3.png" alt="Ductos de inyección de aire" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Sistemas de Extracción</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Implementación de Ductos de Aire</h4>
+        </div>
+      </article>
+
+      <!-- ================= SECCIÓN: MANTENIMIENTO TÉCNICO ================= -->
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img4.jpeg" alt="Mantenimiento Equipo de aire acondicionado Cassette" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #dd6b20; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Mantenimiento Integral</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Servicio Técnico a Equipo Cassette</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img5.png" alt="Mantenimiento Condensador de aire acondicionado" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #dd6b20; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Mantenimiento Preventivo</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Limpieza profunda de Condensador</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img6.png" alt="Mantenimiento Equipo aire acondicionado tipo Split" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #dd6b20; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Mantenimiento Correctivo</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Soporte Técnico en Unidades Split</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img7.png" alt="Equipos Instalados de aire acondicionado" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Equipos Instalados</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Montaje de Unidades Evaporadoras</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img8.png" alt="Equipos Instalados de aire acondicionado" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Suministro</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Entrega y Colocación de Equipos</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img9.png" alt="Equipo aire acondicionado tipo Cassette" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Climatización Comercial</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Instalación de Sistema Cassette</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img10.jpeg" alt="Equipo aire acondicionado tipo Cassette" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #dd6b20; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Inspección Técnica</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Control de Rendimiento de Equipos</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img11.png" alt="Equipos Instalados de aire acondicionado" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #004080; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Infraestructura HVAC</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Sistemas Listos para Operar</h4>
+        </div>
+      </article>
+
+      <!-- ================= SECCIÓN: SERVICIOS GENERALES ================= -->
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img21.jpeg" alt="Limpieza de edificio" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #319795; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Servicios Generales</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Limpieza de Fachadas e Infraestructura</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img22.jpeg" alt="Servicio de Limpieza" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #319795; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Servicios Generales</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Limpieza Integral de Edificios</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img23.jpeg" alt="Servicio de Limpieza" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #319795; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Mantenimiento de Edificios</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Soporte Operativo en Limpieza</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img24.jpeg" alt="Servicio de Limpieza" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #319795; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Limpieza Técnica</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Mantenimiento Físico de Sedes</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img25.jpeg" alt="Servicio de Pintado" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #319795; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Servicios Generales</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Servicio de Pintado de Estructuras</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img26.jpeg" alt="Servicio de Pintado" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #319795; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Acabados Corporativos</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Pintura y Renovación de Fachadas</h4>
+        </div>
+      </article>
+
+      <article class="proyecto-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        <img src="img/img27.png" alt="Instalación de Transformador" style="width: 100%; height: 220px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <span style="font-size: 0.8rem; color: #319795; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Soporte de Potencia</span>
+          <h4 style="margin: 5px 0 0; font-size: 1.1rem; color: #333;">Instalación y Soporte de Transformador</h4>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
